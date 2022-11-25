@@ -1,0 +1,526 @@
+{
+  "workouts": [
+    {
+      "easy": [
+        {
+          "tenMinutes": {
+            "timer": 10,
+            "workout": [
+              {
+                "atMinute": 1,
+                "speed": 5.5,
+                "rhythm": "-"
+              },
+              {
+                "atMinute": 2,
+                "speed": 7,
+                "rhythm": "up"
+              },
+              {
+                "atMinute": 3,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 5,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 6,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 8,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 9,
+                "speed": 8,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 10,
+                "speed": 5.5,
+                "rhythm": "down"
+              }
+            ]
+          },
+          "fifteenMinutes": {
+            "timer": 15,
+            "workout": [
+              {
+                "atMinute": 1,
+                "speed": 5.5,
+                "rhythm": "-"
+              },
+              {
+                "atMinute": 2,
+                "speed": 7,
+                "rhythm": "up"
+              },
+              {
+                "atMinute": 3,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 5,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 6,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 8,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 9,
+                "speed": 8,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 10,
+                "speed": 5.5,
+                "rhythm": "down"
+              }
+            ]
+          },
+          "twentyMinutes": {
+            "timer": 20,
+            "workout": [
+              {
+                "atMinute": 1,
+                "speed": 5.5,
+                "rhythm": "-"
+              },
+              {
+                "atMinute": 2,
+                "speed": 7,
+                "rhythm": "up"
+              },
+              {
+                "atMinute": 3,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 5,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 6,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 8,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 9,
+                "speed": 8,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 10,
+                "speed": 5.5,
+                "rhythm": "down"
+              }
+            ]
+          },
+          "twentyFiveMinutes": {
+            "timer": 25,
+            "workout": [
+              {
+                "atMinute": 1,
+                "speed": 5.5,
+                "rhythm": "-"
+              },
+              {
+                "atMinute": 2,
+                "speed": 7,
+                "rhythm": "up"
+              },
+              {
+                "atMinute": 3,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 5,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 6,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 8,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 9,
+                "speed": 8,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 10,
+                "speed": 5.5,
+                "rhythm": "down"
+              }
+            ]
+          },
+          "thirtyMinutes": {
+            "timer": 30,
+            "workout": [
+              {
+                "atMinute": 1,
+                "speed": 5.5,
+                "rhythm": "-"
+              },
+              {
+                "atMinute": 2,
+                "speed": 7,
+                "rhythm": "up"
+              },
+              {
+                "atMinute": 3,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 5,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 6,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 8,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 9,
+                "speed": 8,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 10,
+                "speed": 5.5,
+                "rhythm": "down"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "medium": [
+        {
+          "tenMinutes": {
+            "timer": 10,
+            "workout": [
+              {
+                "atMinute": 1,
+                "speed": 5.5,
+                "rhythm": "-"
+              },
+              {
+                "atMinute": 2,
+                "speed": 7,
+                "rhythm": "up"
+              },
+              {
+                "atMinute": 3,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 5,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 6,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 8,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 9,
+                "speed": 8,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 10,
+                "speed": 5.5,
+                "rhythm": "down"
+              }
+            ]
+          },
+          "fifteenMinutes": {
+            "timer": 10,
+            "workout": [
+              {
+                "atMinute": 1,
+                "speed": 5.5,
+                "rhythm": "-"
+              },
+              {
+                "atMinute": 2,
+                "speed": 7,
+                "rhythm": "up"
+              },
+              {
+                "atMinute": 3,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 5,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 6,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 8,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 9,
+                "speed": 8,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 10,
+                "speed": 5.5,
+                "rhythm": "down"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "hard": [
+        {
+          "tenMinutes": {
+            "timer": 10,
+            "workout": [
+              {
+                "atMinute": 1,
+                "speed": 5.5,
+                "rhythm": "-"
+              },
+              {
+                "atMinute": 2,
+                "speed": 7,
+                "rhythm": "up"
+              },
+              {
+                "atMinute": 3,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 5,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 6,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 8,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 9,
+                "speed": 8,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 10,
+                "speed": 5.5,
+                "rhythm": "down"
+              }
+            ]
+          },
+          "fifteenMinutes": {
+            "timer": 10,
+            "workout": [
+              {
+                "atMinute": 1,
+                "speed": 5.5,
+                "rhythm": "-"
+              },
+              {
+                "atMinute": 2,
+                "speed": 7,
+                "rhythm": "up"
+              },
+              {
+                "atMinute": 3,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 5,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 6,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 8,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 9,
+                "speed": 8,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 10,
+                "speed": 5.5,
+                "rhythm": "down"
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "veryHard": [
+        {
+          "tenMinutes": {
+            "timer": 10,
+            "workout": [
+              {
+                "atMinute": 1,
+                "speed": 5.5,
+                "rhythm": "-"
+              },
+              {
+                "atMinute": 2,
+                "speed": 7,
+                "rhythm": "up"
+              },
+              {
+                "atMinute": 3,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 5,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 6,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 8,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 9,
+                "speed": 8,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 10,
+                "speed": 5.5,
+                "rhythm": "down"
+              }
+            ]
+          },
+          "fifteenMinutes": {
+            "timer": 10,
+            "workout": [
+              {
+                "atMinute": 1,
+                "speed": 5.5,
+                "rhythm": "-"
+              },
+              {
+                "atMinute": 2,
+                "speed": 7,
+                "rhythm": "up"
+              },
+              {
+                "atMinute": 3,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 5,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 6,
+                "speed": 5.5,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 8,
+                "speed": 7,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 9,
+                "speed": 8,
+                "rhythm": "down"
+              },
+              {
+                "atMinute": 10,
+                "speed": 5.5,
+                "rhythm": "down"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
