@@ -26,27 +26,29 @@ class _WorkoutsPageState extends State<WorkoutsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          children: [
-            WorkoutListMolecule(
-              title: 'Fácil',
-              workouts: workouts,
-            ),
-            WorkoutListMolecule(
-              title: 'Médio',
-              workouts: workouts,
-            ),
-            WorkoutListMolecule(
-              title: 'Difícil',
-              workouts: workouts,
-            ),
-            WorkoutListMolecule(
-              title: 'Muito difícil',
-              workouts: workouts,
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            children: [
+              WorkoutListMolecule(
+                title: 'Fácil',
+                workouts: workouts,
+              ),
+              WorkoutListMolecule(
+                title: 'Médio',
+                workouts: workouts,
+              ),
+              WorkoutListMolecule(
+                title: 'Difícil',
+                workouts: workouts,
+              ),
+              WorkoutListMolecule(
+                title: 'Muito difícil',
+                workouts: workouts,
+              ),
+            ],
+          ),
         ),
       ),
     );

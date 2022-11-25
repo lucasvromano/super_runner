@@ -27,6 +27,14 @@ class _WorkoutDetailsPageState extends State<WorkoutDetailsPage> {
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 8),
+                  child: TextAtom(
+                    text: 'Fácil - 10 Minutos',
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 22),
                   child: Row(

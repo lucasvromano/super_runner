@@ -5,6 +5,7 @@
         {
           "tenMinutes": {
             "timer": 10,
+            "color": "",
             "workout": [
               {
                 "atMinute": 1,
@@ -50,6 +51,7 @@
           },
           "fifteenMinutes": {
             "timer": 15,
+            "color": "",
             "workout": [
               {
                 "atMinute": 1,
@@ -95,6 +97,7 @@
           },
           "twentyMinutes": {
             "timer": 20,
+            "color": "",
             "workout": [
               {
                 "atMinute": 1,
@@ -140,6 +143,7 @@
           },
           "twentyFiveMinutes": {
             "timer": 25,
+            "color": "",
             "workout": [
               {
                 "atMinute": 1,
@@ -185,6 +189,7 @@
           },
           "thirtyMinutes": {
             "timer": 30,
+            "color": "",
             "workout": [
               {
                 "atMinute": 1,
@@ -237,6 +242,7 @@
         {
           "tenMinutes": {
             "timer": 10,
+            "color": "",
             "workout": [
               {
                 "atMinute": 1,
@@ -282,6 +288,7 @@
           },
           "fifteenMinutes": {
             "timer": 10,
+            "color": "",
             "workout": [
               {
                 "atMinute": 1,
@@ -334,6 +341,7 @@
         {
           "tenMinutes": {
             "timer": 10,
+            "color": "",
             "workout": [
               {
                 "atMinute": 1,
@@ -379,6 +387,7 @@
           },
           "fifteenMinutes": {
             "timer": 10,
+            "color": "",
             "workout": [
               {
                 "atMinute": 1,
@@ -431,6 +440,7 @@
         {
           "tenMinutes": {
             "timer": 10,
+            "color": "",
             "workout": [
               {
                 "atMinute": 1,
@@ -476,6 +486,7 @@
           },
           "fifteenMinutes": {
             "timer": 10,
+            "color": "",
             "workout": [
               {
                 "atMinute": 1,
