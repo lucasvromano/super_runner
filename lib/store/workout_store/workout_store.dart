@@ -8,12 +8,10 @@ class WorkoutStore = _WorkoutStore with _$WorkoutStore;
 
 abstract class _WorkoutStore with Store {
   final TrainingMock mock = TrainingMock();
+  late TimeTrainingModel currentTimeTraining;
 
   @observable
   late List<LevelsModel> levels = mock.mockTraining;
-
-  // @observable
-  late TimeTrainingModel currentTimeTraining;
 
   @action
   LevelsModel easyLevel() {

@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:super_runner/components/atoms/text_atom.dart';
 import 'package:super_runner/models/time_training_model.dart';
+import 'package:super_runner/store/menu_store/menu_store.dart';
 import 'package:super_runner/store/workout_store/workout_store.dart';
+
+final menuStore = MenuStore();
 
 class WorkoutDetailsPage extends StatefulWidget {
   final String title;
@@ -20,11 +23,6 @@ class WorkoutDetailsPage extends StatefulWidget {
 
 class _WorkoutDetailsPageState extends State<WorkoutDetailsPage> {
   final workoutStore = WorkoutStore();
-
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -133,8 +131,10 @@ class _WorkoutDetailsPageState extends State<WorkoutDetailsPage> {
               ],
             ),
             ElevatedButton(
-              onPressed: () =>
-                  workoutStore.setCurrentTimeTraining(widget.timeTraining),
+              onPressed: () {
+                workoutStore.setCurrentTimeTraining(widget.timeTraining);
+                Navigator.of(context).pop();
+              },
               style: ElevatedButton.styleFrom(
                 primary: Colors.amber[900],
                 fixedSize: Size.fromWidth(MediaQuery.of(context).size.width),
