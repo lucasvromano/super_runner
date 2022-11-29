@@ -15,7 +15,6 @@ abstract class _MenuStore with Store {
   List<Widget> widgetOptions = <Widget>[
     const HomePage(),
     const WorkoutsPage(),
-    const WorkoutDetailsPage(),
   ];
 
   @action

@@ -1,14 +1,31 @@
 import 'package:flutter/material.dart';
+
 import 'package:super_runner/components/atoms/text_atom.dart';
+import 'package:super_runner/models/time_training_model.dart';
+import 'package:super_runner/store/workout_store/workout_store.dart';
 
 class WorkoutDetailsPage extends StatefulWidget {
-  const WorkoutDetailsPage({Key? key}) : super(key: key);
+  final String title;
+  final TimeTrainingModel timeTraining;
+
+  const WorkoutDetailsPage({
+    Key? key,
+    required this.title,
+    required this.timeTraining,
+  }) : super(key: key);
 
   @override
   State<WorkoutDetailsPage> createState() => _WorkoutDetailsPageState();
 }
 
 class _WorkoutDetailsPageState extends State<WorkoutDetailsPage> {
+  final workoutStore = WorkoutStore();
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,10 +44,11 @@ class _WorkoutDetailsPageState extends State<WorkoutDetailsPage> {
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 8),
+                Padding(
+                  padding: const EdgeInsets.only(top: 8),
                   child: TextAtom(
-                    text: 'Fácil - 10 Minutos',
+                    text:
+                        '${widget.title} - ${widget.timeTraining.minutes} Minutos',
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -49,16 +67,12 @@ class _WorkoutDetailsPageState extends State<WorkoutDetailsPage> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const TextAtom(text: '0 - 1'),
-                          const TextAtom(text: '1 - 2'),
-                          const TextAtom(text: '1 - 2'),
-                          const TextAtom(text: '1 - 2'),
-                          const TextAtom(text: '1 - 2'),
-                          const TextAtom(text: '1 - 2'),
-                          const TextAtom(text: '1 - 2'),
-                          const TextAtom(text: '1 - 2'),
-                          const TextAtom(text: '1 - 2'),
-                          const TextAtom(text: '1 - 2'),
+                          Column(
+                            children: widget.timeTraining.trainingPieces
+                                .map((item) => TextAtom(
+                                    text: '${item.startAt} - ${item.endAt}'))
+                                .toList(),
+                          ),
                         ],
                       ),
                       Column(
@@ -70,16 +84,11 @@ class _WorkoutDetailsPageState extends State<WorkoutDetailsPage> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const TextAtom(text: '5.5'),
-                          const TextAtom(text: '7.0'),
-                          const TextAtom(text: '5.5'),
-                          const TextAtom(text: '5.5'),
-                          const TextAtom(text: '5.5'),
-                          const TextAtom(text: '5.5'),
-                          const TextAtom(text: '5.5'),
-                          const TextAtom(text: '5.5'),
-                          const TextAtom(text: '5.5'),
-                          const TextAtom(text: '5.5'),
+                          Column(
+                            children: widget.timeTraining.trainingPieces
+                                .map((item) => TextAtom(text: '${item.speed}'))
+                                .toList(),
+                          ),
                         ],
                       ),
                       Column(
@@ -91,55 +100,30 @@ class _WorkoutDetailsPageState extends State<WorkoutDetailsPage> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const Icon(
-                            Icons.remove,
-                            color: Colors.blue,
-                            size: 16,
-                          ),
-                          const Icon(
-                            Icons.arrow_upward,
-                            color: Colors.red,
-                            size: 16,
-                          ),
-                          const Icon(
-                            Icons.arrow_downward,
-                            color: Colors.green,
-                            size: 16,
-                          ),
-                          const Icon(
-                            Icons.arrow_downward,
-                            color: Colors.green,
-                            size: 16,
-                          ),
-                          const Icon(
-                            Icons.arrow_downward,
-                            color: Colors.green,
-                            size: 16,
-                          ),
-                          const Icon(
-                            Icons.arrow_downward,
-                            color: Colors.green,
-                            size: 16,
-                          ),
-                          const Icon(
-                            Icons.arrow_downward,
-                            color: Colors.green,
-                            size: 16,
-                          ),
-                          const Icon(
-                            Icons.arrow_downward,
-                            color: Colors.green,
-                            size: 16,
-                          ),
-                          const Icon(
-                            Icons.arrow_downward,
-                            color: Colors.green,
-                            size: 16,
-                          ),
-                          const Icon(
-                            Icons.arrow_downward,
-                            color: Colors.green,
-                            size: 16,
+                          Column(
+                            children: widget.timeTraining.trainingPieces.map(
+                              (item) {
+                                if (item.rhythm == 'down') {
+                                  return const Icon(
+                                    Icons.arrow_downward,
+                                    color: Colors.green,
+                                    size: 16,
+                                  );
+                                }
+                                if (item.rhythm == 'up') {
+                                  return const Icon(
+                                    Icons.arrow_upward,
+                                    color: Colors.red,
+                                    size: 16,
+                                  );
+                                }
+                                return const Icon(
+                                  Icons.remove,
+                                  color: Colors.blue,
+                                  size: 16,
+                                );
+                              },
+                            ).toList(),
                           ),
                         ],
                       ),
@@ -149,7 +133,8 @@ class _WorkoutDetailsPageState extends State<WorkoutDetailsPage> {
               ],
             ),
             ElevatedButton(
-              onPressed: () => print('oi'),
+              onPressed: () =>
+                  workoutStore.setCurrentTimeTraining(widget.timeTraining),
               style: ElevatedButton.styleFrom(
                 primary: Colors.amber[900],
                 fixedSize: Size.fromWidth(MediaQuery.of(context).size.width),

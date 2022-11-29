@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:super_runner/components/atoms/item_workout_atom.dart';
 import 'package:super_runner/components/atoms/text_atom.dart';
-import 'package:super_runner/models/card_timer_model.dart';
+import 'package:super_runner/models/levels_model.dart';
 import 'package:super_runner/pages/workout_details_page.dart';
 
 class WorkoutListMolecule extends StatelessWidget {
   const WorkoutListMolecule({
     Key? key,
     required this.title,
-    required this.workouts,
+    required this.level,
   }) : super(key: key);
 
   final String title;
-  final List<CardTimerModel> workouts;
+  final LevelsModel level;
 
   @override
   Widget build(BuildContext context) {
@@ -29,17 +29,21 @@ class WorkoutListMolecule extends StatelessWidget {
           height: 100,
           child: ListView(
             scrollDirection: Axis.horizontal,
-            children: workouts.map((workout) {
+            children: level.timeTraining.map((timeTraining) {
               return InkWell(
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const WorkoutDetailsPage()),
+                    builder: (context) => WorkoutDetailsPage(
+                      title: title,
+                      timeTraining: timeTraining,
+                    ),
+                  ),
                 ),
                 child: Ink(
-                  color: workout.color,
+                  color: timeTraining.color,
                   child: ItemWorkoutAtom(
-                    text: workout.title,
+                    text: timeTraining.minutes.toString(),
                   ),
                 ),
               );
