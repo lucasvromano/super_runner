@@ -25,6 +25,21 @@ mixin _$MenuStore on _MenuStore, Store {
     });
   }
 
+  late final _$testeAtom = Atom(name: '_MenuStore.teste', context: context);
+
+  @override
+  String get teste {
+    _$testeAtom.reportRead();
+    return super.teste;
+  }
+
+  @override
+  set teste(String value) {
+    _$testeAtom.reportWrite(value, super.teste, () {
+      super.teste = value;
+    });
+  }
+
   late final _$widgetOptionsAtom =
       Atom(name: '_MenuStore.widgetOptions', context: context);
 
@@ -59,6 +74,7 @@ mixin _$MenuStore on _MenuStore, Store {
   String toString() {
     return '''
 selectedIndex: ${selectedIndex},
+teste: ${teste},
 widgetOptions: ${widgetOptions}
     ''';
   }

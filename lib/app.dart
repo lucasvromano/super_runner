@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:super_runner/pages/home_page.dart';
 import 'package:super_runner/pages/menu_page.dart';
+import 'package:super_runner/store/menu_store/menu_store.dart';
+
+final menuStore = MenuStore();
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -12,11 +14,8 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        // appBarTheme: AppBarTheme(
-        //   color: Colors.amber[900],
-        // ),
       ),
-      home: const MenuPage(),
+      home: MenuPage(menuStore: menuStore),
     );
   }
 }

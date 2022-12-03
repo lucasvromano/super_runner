@@ -9,6 +9,22 @@ part of 'workout_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$WorkoutStore on _WorkoutStore, Store {
+  late final _$currentTimeTrainingAtom =
+      Atom(name: '_WorkoutStore.currentTimeTraining', context: context);
+
+  @override
+  TimeTrainingModel? get currentTimeTraining {
+    _$currentTimeTrainingAtom.reportRead();
+    return super.currentTimeTraining;
+  }
+
+  @override
+  set currentTimeTraining(TimeTrainingModel? value) {
+    _$currentTimeTrainingAtom.reportWrite(value, super.currentTimeTraining, () {
+      super.currentTimeTraining = value;
+    });
+  }
+
   late final _$levelsAtom =
       Atom(name: '_WorkoutStore.levels', context: context);
 
@@ -86,6 +102,7 @@ mixin _$WorkoutStore on _WorkoutStore, Store {
   @override
   String toString() {
     return '''
+currentTimeTraining: ${currentTimeTraining},
 levels: ${levels}
     ''';
   }

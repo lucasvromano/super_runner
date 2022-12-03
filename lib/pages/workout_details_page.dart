@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:super_runner/components/atoms/text_atom.dart';
 import 'package:super_runner/models/time_training_model.dart';
+import 'package:super_runner/pages/menu_page.dart';
 import 'package:super_runner/store/menu_store/menu_store.dart';
 import 'package:super_runner/store/workout_store/workout_store.dart';
 
 final menuStore = MenuStore();
+final workoutStore = WorkoutStore();
 
 class WorkoutDetailsPage extends StatefulWidget {
   final String title;
@@ -22,13 +24,11 @@ class WorkoutDetailsPage extends StatefulWidget {
 }
 
 class _WorkoutDetailsPageState extends State<WorkoutDetailsPage> {
-  final workoutStore = WorkoutStore();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Treino'),
+        title: const Text('Detalhes do treino'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -132,11 +132,20 @@ class _WorkoutDetailsPageState extends State<WorkoutDetailsPage> {
             ),
             ElevatedButton(
               onPressed: () {
+                print(workoutStore.currentTimeTraining);
                 workoutStore.setCurrentTimeTraining(widget.timeTraining);
-                Navigator.of(context).pop();
+                menuStore.onItemTapped(0);
+                print(workoutStore.currentTimeTraining!.toJson());
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MenuPage(menuStore: menuStore),
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.amber[900],
+                backgroundColor: Colors.amber[900],
                 fixedSize: Size.fromWidth(MediaQuery.of(context).size.width),
               ),
               child: const Text('Correr'),
